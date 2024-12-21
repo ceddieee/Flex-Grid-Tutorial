@@ -2,6 +2,7 @@ html,
 body {
   margin: 0;
   padding: 0;
+  background-color: #796f6f7e;
 }
 
 .main {
@@ -12,7 +13,7 @@ body {
   gap: 0.5rem;
   justify-content: space-evenly; /* (center, space-around, space-between) */
   align-items: center;
-  background-color: #796f6f7e;
+  /* background-color: #796f6f7e; */
 }
 .main .box:nth-child(1) {
   padding: 10px;
@@ -23,7 +24,7 @@ body {
   align-items: center;
   border: 1px solid;
   border-radius: 10px;
-  box-shadow: -2px -2px 2px;
+  box-shadow: 0px 0px 10px;
   /* background-color: #ff0000; */
 }
 .main .box:nth-child(2) {
@@ -35,7 +36,7 @@ body {
   align-items: center;
   border: 1px solid;
   border-radius: 10px;
-  box-shadow: 2px 2px 2px;
+  box-shadow: 0px 0px 10px;
   /* background-color: #008800; */
 }
 .main .box:nth-child(3) {
@@ -47,7 +48,7 @@ body {
   align-items: center;
   border: 1px solid;
   border-radius: 10px;
-  box-shadow: -2px -2px 2px;
+  box-shadow: 0px 0px 10px;
   /* background-color: #0000ff; */
 }
 .main .box:nth-child(4) {
@@ -59,12 +60,13 @@ body {
   align-items: center;
   border: 1px solid;
   border-radius: 10px;
-  box-shadow: 2px 2px 2px;
+  box-shadow: 0px 0px 10px;
   /* background-color: #b6b60b; */
 }
 
 img {
   width: 100px;
+  margin-left: 5px;
   object-fit: contain;
   mix-blend-mode: color-burn;
 
@@ -85,7 +87,7 @@ p {
   text-shadow: 1px 1px 1px #000000;
 }
 
-h3 {
+h4 {
   color: #000000;
   text-shadow: 1px 1px 1px #000000;
   text-align: center;
