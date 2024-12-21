@@ -2,7 +2,6 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background-color: #796f6f7e;
 }
 
 .main {
@@ -13,7 +12,7 @@ body {
   gap: 0.5rem;
   justify-content: space-evenly; /* (center, space-around, space-between) */
   align-items: center;
-  /* background-color: #796f6f7e; */
+  background-color: #796f6f7e;
 }
 .main .box:nth-child(1) {
   padding: 10px;
@@ -22,7 +21,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid;
+  border: 1px;
   border-radius: 10px;
   box-shadow: 0px 0px 10px;
   /* background-color: #ff0000; */
@@ -34,9 +33,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid;
+  border: 1px;
   border-radius: 10px;
-  box-shadow: 0px 0px 10px;
+  box-shadow: 0px 0px 10px whitesmoke;
   /* background-color: #008800; */
 }
 .main .box:nth-child(3) {
@@ -46,7 +45,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid;
+  border: 1px;
   border-radius: 10px;
   box-shadow: 0px 0px 10px;
   /* background-color: #0000ff; */
@@ -58,9 +57,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid;
+  border: 1px;
   border-radius: 10px;
-  box-shadow: 0px 0px 10px;
+  box-shadow: 0px 0px 10px whitesmoke;
   /* background-color: #b6b60b; */
 }
 
