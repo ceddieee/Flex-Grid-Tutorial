@@ -18,6 +18,7 @@ body {
 }
 
 .all-items {
+  /* FLEX */
   display: flex;
   justify-content: center;
   align-items: center;
