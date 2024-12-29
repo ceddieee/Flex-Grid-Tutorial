@@ -9,63 +9,60 @@ body {
 
   /* Grid */
   display: grid;
+  gap: 0.5rem;
   grid-template-areas:
-    "sidebar navbar navbar"
-    "sidebar base-content base-content"
-    "sidebar footer footer";
-  grid-template-columns: 260px 1fr 1fr;
-  grid-template-rows: 100px 1fr 60px;
-}
-
-/* SIDEBAR */
-.sidebar {
-  grid-area: sidebar;
-  background-color: #160068;
-  color: white;
-}
-#logo {
-  padding: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#bcp-logo {
-  height: 80px;
-  width: 50;
-}
-li a {
-  color: white;
-  text-decoration: none;
-}
-li {
-  list-style: none;
+    "item1 item2 item3"
+    "item1 item4 item5"
+    "item1 item4 item6";
 }
 
 /* NAVIGATION BAR */
-.navbar {
-  grid-area: navbar;
+.item1 {
+  grid-area: item1;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #008000;
+  background-color: red;
 }
 
 /* CONTENT */
-.base-content {
-  grid-area: base-content;
+.item2 {
+  grid-area: item2;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #0000ff;
+  background-color: green;
 }
 
 /* FOOTER */
-.footer {
-  grid-area: footer;
-  background-color: gainsboro;
-}
-#footer-wrapper {
+.item3 {
+  grid-area: item3;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: blue;
+}
+
+.item4 {
+  grid-area: item4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: yellow;
+}
+
+.item5 {
+  grid-area: item5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: pink;
+}
+
+.item6 {
+  grid-area: item6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
 }
