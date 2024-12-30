@@ -17,10 +17,17 @@ body {
 .wrapper1 {
   height: 60%;
   width: 60%;
+  background-color: black;
 
   /* GRID */
   display: grid;
   grid-template-rows: 100px 1fr;
+  row-gap: 5px;
+}
+
+.wrapper1 div {
+  border: 2px solid greenyellow;
+  border-radius: 5px;
 }
 
 .main1 {
