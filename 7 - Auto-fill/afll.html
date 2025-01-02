@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>autofill</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      .autofill-container {
+        height: 100vh;
+        background-color: black;
+
+        /* FLEX */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .autofill-wrapper {
+        height: 60%;
+        width: 60%;
+        background-color: black;
+
+        /* GRID */
+        display: grid;
+        grid-template-rows: 100px 1fr;
+        row-gap: 5px;
+      }
+
+      .autofill-wrapper div {
+        border: 2px solid greenyellow;
+        border-radius: 5px;
+      }
+
+      .autofill-header {
+        grid-row: 1/2;
+
+        padding: 10px;
+        text-align: center;
+        text-shadow: 1px 1px 2px white;
+        background-color: rgb(167, 165, 165);
+      }
+
+      .autofill-body {
+        grid-row: 2/3;
+        padding: 5px;
+        background-color: whitesmoke;
+
+        /* GRID */
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 115px);
+        gap: 0.5rem;
+      }
+
+      .autofill-body div {
+        border: 2px solid black;
+      }
+
+      .autofill-body-item1 {
+        background-color: red;
+      }
+
+      .autofill-body-item2 {
+        background-color: green;
+      }
+
+      .autofill-body-item3 {
+        background-color: blue;
+      }
+
+      .autofill-body-item4 {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- This is the example of Grid Areas -->
+    <div class="autofill-container">
+      <div class="autofill-wrapper">
+        <div class="autofill-header">
+          <span><h1>AUTO-FILL</h1></span>
+        </div>
+
+        <div class="autofill-body">
+          <div class="autofill-body-item1"></div>
+          <div class="autofill-body-item2"></div>
+          <div class="autofill-body-item3"></div>
+          <div class="autofill-body-item4"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

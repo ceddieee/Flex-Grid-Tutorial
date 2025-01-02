@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>autofit</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      .autofit-container {
+        height: 100vh;
+        background-color: black;
+
+        /* FLEX */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .autofit-wrapper {
+        height: 60%;
+        width: 60%;
+        background-color: black;
+
+        /* GRID */
+        display: grid;
+        grid-template-rows: 100px 1fr;
+        row-gap: 5px;
+      }
+
+      .autofit-wrapper div {
+        border: 2px solid greenyellow;
+        border-radius: 5px;
+      }
+
+      .autofit-header {
+        grid-row: 1/2;
+
+        padding: 10px;
+        text-align: center;
+        text-shadow: 1px 1px 2px white;
+        background-color: rgb(167, 165, 165);
+      }
+
+      .autofit-body {
+        grid-row: 2/3;
+        padding: 5px;
+        background-color: whitesmoke;
+
+        /* GRID */
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(25px, 1fr));
+        gap: 0.5rem;
+      }
+
+      .autofit-body div {
+        border: 2px solid black;
+      }
+
+      .autofit-body-item1 {
+        background-color: red;
+      }
+
+      .autofit-body-item2 {
+        background-color: green;
+      }
+
+      .autofit-body-item3 {
+        background-color: blue;
+      }
+
+      .autofit-body-item4 {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- This is the example of Grid Areas -->
+    <div class="autofit-container">
+      <div class="autofit-wrapper">
+        <div class="autofit-header">
+          <span><h1>AUTO-FIT</h1></span>
+        </div>
+
+        <div class="autofit-body">
+          <div class="autofit-body-item1"></div>
+          <div class="autofit-body-item2"></div>
+          <div class="autofit-body-item3"></div>
+          <div class="autofit-body-item4"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

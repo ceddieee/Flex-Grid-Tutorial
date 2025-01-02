@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Repeat</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      .repeat-container {
+        height: 100vh;
+        background-color: black;
+
+        /* FLEX */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .repeat-wrapper {
+        height: 60%;
+        width: 60%;
+        background-color: black;
+
+        /* GRID */
+        display: grid;
+        grid-template-rows: 100px 1fr;
+        row-gap: 5px;
+      }
+
+      .repeat-wrapper div {
+        border: 2px solid greenyellow;
+        border-radius: 5px;
+      }
+
+      .repeat-header {
+        grid-row: 1/2;
+
+        padding: 10px;
+        text-align: center;
+        text-shadow: 1px 1px 2px white;
+        background-color: rgb(167, 165, 165);
+      }
+
+      .repeat-body {
+        grid-row: 2/3;
+        padding: 5px;
+        background-color: whitesmoke;
+
+        /* GRID */
+        display: grid;
+        gap: 0.5rem;
+        grid-template-columns: repeat(2, 1fr) 50px 150px;
+      }
+
+      .repeat-body div {
+        border: 2px solid black;
+      }
+
+      .repeat-body-item1 {
+        grid-column: 1/2;
+        background-color: red;
+      }
+
+      .repeat-body-item2 {
+        grid-column: 2/3;
+        background-color: green;
+      }
+
+      .repeat-body-item3 {
+        grid-column: 3/4;
+        background-color: blue;
+      }
+
+      .repeat-body-item4 {
+        grid-column: 4/5;
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- This is the example of Grid Areas -->
+    <div class="repeat-container">
+      <div class="repeat-wrapper">
+        <div class="repeat-header">
+          <span><h1>REPEAT</h1></span>
+        </div>
+
+        <div class="repeat-body">
+          <div class="repeat-body-item1"></div>
+          <div class="repeat-body-item2"></div>
+          <div class="repeat-body-item3"></div>
+          <div class="repeat-body-item4"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

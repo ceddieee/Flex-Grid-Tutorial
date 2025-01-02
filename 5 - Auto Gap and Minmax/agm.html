@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Auto Gap Minmax</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      /* AGM MAIN CONTAINER1 */
+      .agm-container1 {
+        height: 100vh;
+        background-color: black;
+
+        /* GRID */
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+
+      .agm-property1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      /*  GAP MAIN CONTAINER */
+      .gap-main {
+        height: 50%;
+        width: 90%;
+        background-color: black;
+
+        /* GRID */
+        display: grid;
+        grid-template-rows: 80px 1fr;
+        gap: 5px;
+      }
+      .gap-main div {
+        border: 2px solid greenyellow;
+      }
+      .gap-header {
+        /* FLEX */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(167, 165, 165);
+      }
+      #gap-title {
+        text-shadow: 1px 1px 2px white;
+      }
+      .gap-body {
+        padding: 5px;
+        background-color: whitesmoke;
+        /* GRID */
+        display: grid;
+        grid-template-areas:
+          "gap-content1 gap-content3"
+          "gap-content2 gap-content4";
+        /* about gap you can also gap the row or column only,
+        including (row-gap, column-gap).*/
+        gap: 10px;
+      }
+      .gap-body div {
+        border-radius: 10px;
+        border: 2px solid black;
+        box-shadow: 0px 0px 5px;
+      }
+      .gap-body .gap-content1:nth-child(1) {
+        background-color: red;
+      }
+      .gap-body .gap-content2:nth-child(2) {
+        background-color: green;
+      }
+      .gap-body .gap-content3:nth-child(3) {
+        background-color: blue;
+      }
+      .gap-body .gap-content4:nth-child(4) {
+        background-color: yellow;
+      }
+
+      /****************************/
+      .agm-property2 {
+        /* FLEX */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      /*  AUTO MAIN CONTAINER */
+      .auto-main {
+        height: 50%;
+        width: 90%;
+        background-color: black;
+
+        /* GRID */
+        display: grid;
+        grid-template-rows: 80px 1fr;
+        gap: 5px;
+      }
+      .auto-main div {
+        border: 2px solid greenyellow;
+      }
+      .auto-header {
+        /* FLEX */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(167, 165, 165);
+      }
+      #auto-title {
+        text-shadow: 1px 1px 2px white;
+      }
+      .auto-body {
+        padding: 5px;
+        background-color: whitesmoke;
+        /* GRID */
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: auto 50px 200px 200px;
+        /* about gap you can also gap the row or column only,
+        including (row-gap, column-gap).*/
+        gap: 10px;
+      }
+      .auto-body div {
+        border-radius: 10px;
+        border: 2px solid black;
+        box-shadow: 0px 0px 5px;
+      }
+      .auto-body .auto-content1:nth-child(1) {
+        background-color: red;
+      }
+      .auto-body .auto-content2:nth-child(2) {
+        background-color: green;
+      }
+      .auto-body .auto-content3:nth-child(3) {
+        background-color: blue;
+      }
+      .auto-body .auto-content4:nth-child(4) {
+        background-color: yellow;
+      }
+
+      /****************************/
+      .agm-property3 {
+        /* FLEX */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      /*  AUTO MAIN CONTAINER */
+      .minmax-main {
+        height: 50%;
+        width: 90%;
+        background-color: black;
+
+        /* GRID */
+        display: grid;
+        grid-template-rows: 80px 1fr;
+        gap: 5px;
+      }
+      .minmax-main div {
+        border: 2px solid greenyellow;
+      }
+      .minmax-header {
+        /* FLEX */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(167, 165, 165);
+      }
+      #minmax-title {
+        text-shadow: 1px 1px 2px white;
+      }
+      .minmax-body {
+        padding: 5px;
+        background-color: whitesmoke;
+
+        /* GRID */
+        display: grid;
+        place-content: center;
+        grid-auto-flow: column;
+        grid-auto-columns: minmax(100px, 150px) 100px 50px 1fr;
+        /* about gap you can also gap the row or column only,
+        including (row-gap, column-gap).*/
+        gap: 10px;
+      }
+      .minmax-body div {
+        height: 100px;
+        border-radius: 10px;
+        border: 2px solid black;
+        box-shadow: 0px 0px 5px;
+      }
+      .minmax-body .minmax-content1:nth-child(1) {
+        background-color: red;
+      }
+      .minmax-body .minmax-content2:nth-child(2) {
+        background-color: green;
+      }
+      .minmax-body .minmax-content3:nth-child(3) {
+        background-color: blue;
+      }
+      .minmax-body .minmax-content4:nth-child(4) {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="agm-container1">
+      <div class="agm-property1">
+        <div class="gap-main">
+          <div class="gap-header">
+            <span id="gap-title"><h1>GAP</h1></span>
+          </div>
+          <div class="gap-body">
+            <div class="gap-content1"></div>
+            <div class="gap-content2"></div>
+            <div class="gap-content3"></div>
+            <div class="gap-content4"></div>
+          </div>
+        </div>
+      </div>
+
+      <!--****************************-->
+      <div class="agm-property2">
+        <div class="auto-main">
+          <div class="auto-header">
+            <span id="auto-title"><h1>AUTO</h1></span>
+          </div>
+          <div class="auto-body">
+            <div class="auto-content1"></div>
+            <div class="auto-content2"></div>
+            <div class="auto-content3"></div>
+            <div class="auto-content4"></div>
+          </div>
+        </div>
+      </div>
+
+      <!--****************************-->
+      <div class="agm-property3">
+        <div class="minmax-main">
+          <div class="minmax-header">
+            <span id="minmax-title"><h1>MINMAX</h1></span>
+          </div>
+          <div class="minmax-body">
+            <div class="minmax-content1"></div>
+            <div class="minmax-content2"></div>
+            <div class="minmax-content3"></div>
+            <div class="minmax-content4"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
